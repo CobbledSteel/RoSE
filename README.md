@@ -27,32 +27,31 @@ The instructions assume that a user already has robotic applications and hardwar
 
 ## Tutorial Meta-Information Checklist
 
-    • Runtime environment: Ubuntu 18.04.6 LTS, Vitis v2021.1
-    • Hardware (FireSim Simulation):  Intel Xeon Gold 6242, Xilinx U250
-    • Hardware (AirSim Simulation): AWS EC2 Instance (g4dn.2xlarge), Intel Xeon Platinum 8259CL, Tesla T4.
-    • How much disk space is required?: 200GB
-    • Experiments: AirSim/FireSim end-to-end full stack simulations of a UAV using RoSE, running DNN-based controllers. Experiments evaluate both UAV and simulator performance.
-    • Program: Chisel (RTL), C++ (FireSim bridge drivers, robotic control software), Python (Synchronizer and scheduler.)
-    • Quantitative Metrics: DNN Latency, mission time, average flight velocity, accelerator activity factor, as in Section Evaluation.
-    • Qualitative Metrics: Flight trajectories, flight recordings.
-    • Output: CSV logs from the synchronizer, tracking UAV dynamics, sensing requests, and control targets.
-    • How much time is needed to prepare the workflow?: 2 hours (scripted installation).
-    • How much time is needed to complete experiments?: 24 hours (scripted run, scripted result parsing)
-    • Publicly available: Yes.
-    • Code licenses: Several, see download.
-    • Contact for Artifact Evaluator: Contact SLICE support (slice-support@eecs.berkeley.edu) if you need help setting up AWS instances.
-
+* Runtime environment: Ubuntu 18.04.6 LTS, Vitis v2021.1
+* Hardware (FireSim Simulation):  Intel Xeon Gold 6242, Xilinx U250
+* Hardware (AirSim Simulation): AWS EC2 Instance (g4dn.2xlarge), Intel Xeon Platinum 8259CL, Tesla T4.
+* How much disk space is required?: 200GB
+* Experiments: AirSim/FireSim end-to-end full stack simulations of a UAV using RoSE, running DNN-based controllers. Experiments evaluate both UAV and simulator performance.
+* Program: Chisel (RTL), C++ (FireSim bridge drivers, robotic control software), Python (Synchronizer and scheduler.)
+* Quantitative Metrics: DNN Latency, mission time, average flight velocity, accelerator activity factor.
+* Qualitative Metrics: Flight trajectories, flight recordings.
+* Output: CSV logs from the synchronizer, tracking UAV dynamics, sensing requests, and control targets.
+* How much time is needed to prepare the workflow?: 2 hours (scripted installation).
+* How much time is needed to complete experiments?: 24 hours (scripted run, scripted result parsing)
+* Publicly available: Yes.
+* Code licenses: Several, see download.
+* Contact for Artifact Evaluator: Contact SLICE support (slice-support@eecs.berkeley.edu) if you need help setting up AWS instances.
 
 ## Description
 (1) How to access:
 
  • The artifacts consist of modifications/patches to the following sources:
 
+* RoSE Core: Deployment, synchronization, and evaluation software, as well as hardware configurations, and patches to FireSim and Chipyard. (https://github.com/CobbledSteel/RoSE)
+* FireSim: Top-level FPGA-Accelerated RTL Simulation Environment (https://github.com/firesim/firesim) 
+* Chipyard: RISC-V SoC generation environment (https://github.com/ucb-bar/chipyard) 
+* RISCV ONNX Runtime: Software for executing HW-accelerated DNN models, modified for use in  UAV control (https://github.com/ucb-bar/onnxruntime-riscv/tree/onnx-rose).
 
-    • RoSE Core: Deployment, synchronization, and evaluation software, as well as hardware configurations, and patches to FireSim and Chipyard. (https://github.com/CobbledSteel/RoSE)
-    • FireSim: Top-level FPGA-Accelerated RTL Simulation Environment (https://github.com/firesim/firesim) 
-    • Chipyard: RISC-V SoC generation environment (https://github.com/ucb-bar/chipyard) 
-    • RISCV ONNX Runtime: Software for executing HW-accelerated DNN models, modified for use in  UAV control (https://github.com/ucb-bar/onnxruntime-riscv/tree/onnx-rose).
 
 
 Additionally, this evaluation builds upon the following infrastructures. For the purpose of the evaluation, binaries for simulators built from Unreal Engine and AirSim are provided. 
