@@ -121,7 +121,7 @@ To train new classifier DNNs using the provided datasets, run the following.
 
 ```bash env/dnn/train.sh```
 
-Finally, the steps for building custom Unreal Engine maps are out of the scope of this evaluation. However, new environments can be built using the documentation provided at (https://microsoft.github.io/AirSim/build linux/).
+Finally, the steps for building custom Unreal Engine maps are out of the scope of this evaluation. However, new environments can be built using the documentation provided at (https://microsoft.github.io/AirSim/build_linux/).
 
 • Experiment Workflow
 
