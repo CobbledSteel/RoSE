@@ -59,26 +59,27 @@ Running all the steps below in a screen or tmux session is recommended, as some 
 
 • FireSim Installation Begin by installing FireSim on the evaluation instances by running the following commands.
 
+```
 
- ```git clone https://github.com/firesim/firesim```
+git clone https://github.com/firesim/firesim
 
+cd firesim
 
- ```cd firesim```
-
-
- ```git checkout 1.14.2```
-
-
-```./scripts/machine-launch-script.sh```
+git checkout 1.14.2
 
 
- ```./build-setup.sh```
+./scripts/machine-launch-script.sh
 
 
- ```source sourceme-f1-manager.sh```
+./build-setup.sh
 
 
-  ```firesim managerinit --platform vitis```
+source sourceme-f1-manager.sh
+
+
+firesim managerinit --platform vitis
+
+```
 
 • RoSE Installation Begin by cloning RoSEin the project directory:
 
