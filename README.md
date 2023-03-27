@@ -45,7 +45,7 @@ Additionally, GPU access is needed in order to run robotics environment simulati
 
 • One AWS EC2 c5.4xlarge instance (also referred to as “manager” instance), and three f1.2xlarge instances are required (we split the workload to run on three parallel f1 instances to save runtime, which takes more than 8 hours if run on a single instance). The latter will be launched automatically by FireSim’s manager.
 
-• We have provided pre-built FPGA images to avoid the long latency ($\sim$8 hours) of the FPGA-built process. However, if users want to build custom FPGA images, one additional z1d.2xlarge is required.
+• We have provided pre-built FPGA images to avoid the long latency (sim 8 hours) of the FPGA-built process. However, if users want to build custom FPGA images, one additional z1d.2xlarge is required.
 
 (3) Dependencies - Software 
 
