@@ -1,5 +1,21 @@
-# RoSE
+# RoSÉ
 A Hardware-Software Co-Simulation Infrastructure Enabling Pre-Silicon Full-Stack Robotics SoC Evaluation
+
+Robotic systems such as unmanned autonomous drones and self-driving cars have been widely deployed in many scenarios and have the potential to revolutionize the future generation of computing. To improve the performance and energy efficiency of robotic platforms,  significant research efforts are being devoted to developing hardware accelerators for workloads that form bottlenecks in the robotics software pipeline.
+
+Although domain-specific accelerators (DSAs) can offer improved efficiency over general-purpose processors on isolated robotics benchmarks, system-level constraints such as data movement and contention over shared resources could significantly impact the achievable acceleration in an end-to-end fashion.
+
+In addition, the closed-loop nature of robotic systems, where there is a tight interaction across different deployed environments, software stacks, and hardware architecture, further exacerbates the difficulties of evaluating robotic SoCs. 
+
+To address this limitation, we develop RoSÉ, an open-source, hardware-software co-simulation infrastructure for full-stack, pre-silicon hardware-in-the-loop evaluation of robotics SoCs, together with the full software stack and realistic robotic environments created to support robotics RoSE captures the complex interactions across hardware, algorithm, and environment, enabling new architectural research directions in hardware-software co-design for robotic UAV systems.
+
+Specifically, RoSÉ integrates AirSim, a software robotic environment simulator, supporting UAV models and FireSim, an FPGA-based RTL simulator, to capture closed-loop interactions between environments, algorithms, and hardware.
+
+The sensor environment data is passed from AirSim to FireSim to trigger the hardware pipeline, and the computed commands are generated from the FireSim hardware simulation and fed back to AirSim. RoSÉ accurately synchronizes the timing and data transfer between the AirSim environment simulator and the FireSim hardware simulator without significant degradation in simulation speed. 
+
+Our evaluation demonstrates that RoSÉ holistically captures the closed-loop interactions between environment, algorithms, and hardware, opening up new opportunities for systematic hardware-software co-design for robotic UAV systems. 
+
+# RoSÉ Tutorial
 This artifact appendix describes how to use RoSEto run end-to-end robotics simulations, and how to reproduce experimental results.
 
 The instructions assume that a user already has robotic applications and hardware configurations developed, and provides reference examples used in the evaluation of this work. While RoSEcan be used to develop new hardware and software, instructions to do so are outside of the scope of the artifact evaluation.
@@ -193,7 +209,7 @@ After executing the prior experiments, figures can be generated using the CSV ou
  ```
 
 ## Experiment Customization
-• Building New FPGA Images In addition to the provided SoC configurations, users can evaluate other designs. To evaluate new designs, refer to the Chipyard documentation, as well as the example RoSE-annotated configs found in `soc/src/main/scala/RoSEConfigs.scala`.
+• Building New FPGA Images In addition to the provided SoC configurations, users can evaluate other designs. To evaluate new designs, refer to the Chipyard documentation, as well as the example RoSÉ-annotated configs found in `soc/src/main/scala/RoSEConfigs.scala`.
 
 • Designing AirSim Environments If users install Unreal Engine as well as AirSim, it is possible to create new `maps/environments` for robot agents to interact with. By default, one can modify the `Blocks environment` provided by AirSim. Additional assets and maps can be designed by users, or obtained from the Unreal Marketplace.
 
