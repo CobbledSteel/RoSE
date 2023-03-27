@@ -56,8 +56,8 @@ The instructions assume that a user already has robotic applications and hardwar
 
 Additionally, this evaluation builds upon the following infrastructures. For the purpose of the evaluation, binaries for simulators built from Unreal Engine and AirSim are provided. 
 
-    • Unreal Engine: 3D Environment development, simulation, and rendering platform (https://www.unrealengine.com/en-US/ue-on-github)
-    • AirSim: UAV simulation plugin for Unreal Engine (https://github.com/microsoft/AirSim)
+* Unreal Engine: 3D Environment development, simulation, and rendering platform (https://www.unrealengine.com/en-US/ue-on-github)
+* AirSim: UAV simulation plugin for Unreal Engine (https://github.com/microsoft/AirSim)
 
 (2) Dependencies - Hardware 
 
