@@ -53,7 +53,7 @@ Use ssh or mosh on your local machine to remote access evaluation instances. All
 
 ## Installation
 
-Evaluation is performed on EDA servers provided by the authors. To access the evaluation instances, provide public keys for remote login, and the authors will provide server addresses for evaluation. Within the evaluation instances, run all `installation/setup` within the `/scratch/rose-isca-ae-[reviewer-login-id]` directory, referred to as the project directory. The evaluation instances will have the environment set up for accessing the necessary EDA tools.
+Evaluation is performed on EDA servers provided by the authors. To access the evaluation instances, provide public keys for remote login, and the authors will provide server addresses for evaluation. Within the evaluation instances, run all `installation/setup` within the `/scratch/rose-isca-ae-[reviewer-login-id]` directory, referred to as the project directory. An alternative way of setting  up is to refer to FireSim docs for on premise FPGA setup https://docs.fires.im/en/1.14.2/Advanced-Usage/Vitis.html?highlight=on-premise The evaluation instances will have the environment set up for accessing the necessary EDA tools.
 
 Running all the steps below in a screen or tmux session is recommended, as some commands may take several hours to execute.
 
@@ -82,15 +82,21 @@ Running all the steps below in a screen or tmux session is recommended, as some 
 
 Next, within RoSE, run the setup script to set the proper environment variables. Make sure to run this script whenever starting a new interactive shell.
 
-```source rose-setup.sh```
+```
+    source rose-setup.sh
+```
 
 After this is complete, run the following script to patch FireSim and Chipyard with the modifications described in Figure~\reffig:sync_diagram, and to instantiate submodules.
 
-```bash soc/setup.sh```
+```
+    bash soc/setup.sh
+```
 
-After this setup is complete, run the following script to build binaries for the trail-navigation controllers evaluated in Section~\refsec:methodology for generating RISC-V Fedora images containing the controllers and ONNX models.
+After this setup is complete, run the following script to build binaries for the trail-navigation controllers evaluated in Section IV for generating RISC-V Fedora images containing the controllers and ONNX models.
 
- ```bash soc/build.sh```
+ ```
+    bash soc/build.sh
+ ```
 
 
 Next, run the following script to install dependencies and configure parameters for the RoSEdeployment scripts, using the AirSim IP address provided by the authors.
@@ -102,11 +108,15 @@ Next, run the following script to install dependencies and configure parameters 
 • Optional References
 This evaluation environment provides pre-built FPGA bitstreams, pre-trained controller DNN models, and AirSim environment binaries. To build new bitstreams, run the following:
 
- ```bash soc/buildbitstreams.sh```
+ ```
+    bash soc/buildbitstreams.sh
+ ```
 
 To train new classifier DNNs using the provided datasets, run the following.
 
-```bash env/dnn/train.sh```
+```
+    bash env/dnn/train.sh
+```
 
 Finally, the steps for building custom Unreal Engine maps are out of the scope of this evaluation. However, new environments can be built using the documentation provided at (https://microsoft.github.io/AirSim/build_linux/).
 
@@ -117,7 +127,9 @@ Please reach out to authors when planning to run experiments to guarantee exclus
 
 
 
- ```bash deploy/scripts/run-all.sh```
+ ```bash
+    bash deploy/scripts/run-all.sh
+ ```
 
 
 To run individual experiments corresponding to the figures in this work, the following scripts are also provided (which are all included in the main script). 
@@ -126,43 +138,57 @@ To run individual experiments corresponding to the figures in this work, the fol
 • Figure 10:
 
 
- ```bash deploy/scripts/tunnel-exp.sh```
+ ```bash
+    bash deploy/scripts/tunnel-exp.sh
+ ```
 
 
 • Figures 15, 16:
 
 
- ```bash deploy/scripts/rose-perf-sync-only.sh```
+ ```bash
+    bash deploy/scripts/rose-perf-sync-only.sh
+ ```
 
 
 
- ```bash deploy/scripts/rose-perf-tunnel-exp.sh```
+ ```bash
+    bash deploy/scripts/rose-perf-tunnel-exp.sh
+ ```
 
 
 • Figures 11, 14:
 
 
- ```bash deploy/scripts/rose-hw-sw-sweep.sh```
+ ```bash
+     bash deploy/scripts/rose-hw-sw-sweep.sh
+ ```
 
 
 • Figure 12:
 
 
- ```bash deploy/scripts/rose-velocity-sweep.sh```
+ ```bash
+    bash deploy/scripts/rose-velocity-sweep.sh
+ ```
 
 
 • Figure 13:
 
 
- ```bash deploy/scripts/rose-dynamic-exp.sh```
+ ```bash
+    bash deploy/scripts/rose-dynamic-exp.sh
+ ```
 
 
 ## Figures and Evaluation
-After executing the prior experiments, figures can be generated using the CSV outputs by running the following command. The figures will be available as PDF files in •deploy/figures/.
+After executing the prior experiments, figures can be generated using the CSV outputs by running the following command. The figures will be available as PDF files in `deploy/figures/`.
 
 
 
- ```python3 deploy/scripts/generate-figures.py```
+ ```python
+    python3 deploy/scripts/generate-figures.py
+ ```
 
 ## Experiment Customization
 • Building New FPGA Images In addition to the provided SoC configurations, users can evaluate other designs. To evaluate new designs, refer to the Chipyard documentation, as well as the example RoSE-annotated configs found in `soc/src/main/scala/RoSEConfigs.scala`.
