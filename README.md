@@ -60,38 +60,24 @@ Running all the steps below in a screen or tmux session is recommended, as some 
 • FireSim Installation Begin by installing FireSim on the evaluation instances by running the following commands.
 
 ```
-
-git clone https://github.com/firesim/firesim
-
-cd firesim
-
-git checkout 1.14.2
-
-
-./scripts/machine-launch-script.sh
-
-
-./build-setup.sh
-
-
-source sourceme-f1-manager.sh
-
-
-firesim managerinit --platform vitis
-
+    git clone https://github.com/firesim/firesim
+    cd firesim
+    git checkout 1.14.2
+    ./scripts/machine-launch-script.sh
+    ./build-setup.sh
+    source sourceme-f1-manager.sh
+    firesim managerinit --platform vitis
 ```
 
 • RoSE Installation Begin by cloning RoSEin the project directory:
 
 
 
- ```git clone https://github.com/CobbledSteel/RoSE```
-
-
- ```cd RoSE```
-
-
- ```git checkout isca-ae```
+ ```
+    git clone https://github.com/CobbledSteel/RoSE
+    cd RoSE
+    git checkout isca-ae
+```
 
 
 Next, within RoSE, run the setup script to set the proper environment variables. Make sure to run this script whenever starting a new interactive shell.
