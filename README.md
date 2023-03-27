@@ -6,7 +6,7 @@ This artifact appendix describes how to use RoSEto run end-to-end robotics simul
 
     • Runtime environment: Ubuntu 18.04.6 LTS, Vitis v2021.1
     • Hardware (FireSim Simulation):  Intel Xeon Gold 6242, Xilinx U250
-    • Hardware (AirSim Simulation): AWS EC2 Instance (•g4dn.2xlarge), Intel Xeon Platinum 8259CL, Tesla T4.
+    • Hardware (AirSim Simulation): AWS EC2 Instance (g4dn.2xlarge), Intel Xeon Platinum 8259CL, Tesla T4.
     • How much disk space is required?: 200GB
     • Experiments: AirSim/FireSim end-to-end full stack simulations of a UAV using RoSE, running DNN-based controllers. Experiments evaluate both UAV and simulator performance.
     • Program: Chisel (RTL), C++ (FireSim bridge drivers, robotic control software), Python (Synchronizer and scheduler.)
@@ -39,7 +39,7 @@ Additionally, this evaluation builds upon the following infrastructures. For the
 
 (2) Dependencies - Hardware 
 
-To run a full simulation with RoSE, access to a GPU and FPGA is required, although these can be hosted on separate computers. For this artifact evaluation, instructions for running simulations on a locally-provisioned FPGA are provided. However, RoSEcan also be used using AWS EC2 FPGA instances (e.g. `f1.2xlarge`). To avoid lengthy build times of over 8 hours, we provide pre-built FPGA instances for the SoC configurations evaluated in this work. However, reference build scripts for re-generating new bitstreams are provided. 
+To run a full simulation with RoSE, access to a GPU and FPGA is required, although these can be hosted on separate computers. For this artifact evaluation, instructions for running simulations on a locally-provisioned FPGA are provided. However, RoSEcan also be used using AWS EC2 FPGA instances (e.g. f1.2xlarge). To avoid lengthy build times of over 8 hours, we provide pre-built FPGA instances for the SoC configurations evaluated in this work. However, reference build scripts for re-generating new bitstreams are provided. 
 
 Additionally, GPU access is needed in order to run robotics environment simulations with rendering. For this evaluation, AirSim binaries packaged using Unreal Engine are provided. We also provide API access to running AirSim environments hosted on AWS. While direct access to live AirSim renderings are not needed for the evaluation, remote desktop access could be provided if requested to view simulation progress.
 
