@@ -20,14 +20,14 @@ In summary, this project makes the following contributions:
 
 * We demonstrate design space exploration of domain-specific SoCs enabled by RoSÉ and identify significant design trade-offs.
 
-In response to the growing complexity of robotics workloads, hardware, and applications, we propose RoSÉ, enabling robotics UAV researchers and architects to comprehensively evaluate robotics UAV SoCs. RoSÉ captures a full-stack simulation of a robot by integrating the simulation of a robot UAV's environment and its RTL, enabling design space exploration of robot environments, algorithms, hardware, and system parameters within a unified simulation environment. 
+In summary, RoSÉ enables robotics UAV researchers and architects to comprehensively evaluate robotics UAV SoCs. RoSÉ captures a full-stack simulation of a robot by integrating the simulation of a robot UAV's environment and its RTL, enabling design space exploration of robot environments, algorithms, hardware, and system parameters within a unified simulation environment. 
 
 By using RoSÉ, researchers can better study and analyze the tradeoffs of robotic UAV systems without the overhead of taping out an SoC. Building upon RoSÉ by introducing new applications, robot UAV environments, and architectures will enable the agile development of robotics SoCs across diverse domains. 
 
 # RoSÉ Tutorial
 This artifact appendix describes how to use RoSÉ to run end-to-end robotics simulations, and how to reproduce experimental results.
 
-The instructions assume that a user already has robotic applications and hardware configurations developed, and provides reference examples used in the evaluation of this work. While RoSEcan be used to develop new hardware and software, instructions to do so are outside of the scope of the artifact evaluation.
+The instructions assume that a user already has robotic applications and hardware configurations developed, and provides reference examples used in the evaluation of this work. While RoSÉ can be used to develop new hardware and software, instructions to do so are outside of the scope of the artifact evaluation.
 
 ## Tutorial Meta-Information Checklist
 
