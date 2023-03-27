@@ -123,7 +123,7 @@ To train new classifier DNNs using the provided datasets, run the following.
 
 Finally, the steps for building custom Unreal Engine maps are out of the scope of this evaluation. However, new environments can be built using the documentation provided at (https://microsoft.github.io/AirSim/build_linux/).
 
-• Experiment Workflow
+## Experiment Workflow
 
 Now that the environment has been set up and the target hardware and software have been built, one can run the experiments in this work by running the following scripts`.\footnote` 
 Please reach out to authors when planning to run experiments to guarantee exclusive access to FPGA resources. All the experiments can be executed by running the following command. This will generate CSV files as well as videos recorded from the front-facing camera of the simulated UAV in `deploy/logs/`. 
