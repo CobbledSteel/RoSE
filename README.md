@@ -12,7 +12,7 @@ Specifically, RoSÉ integrates AirSim, a software robotic environment simulator,
 
 Our evaluation demonstrates that RoSÉ holistically captures the closed-loop interactions between environment, algorithms, and hardware, opening up new opportunities for systematic hardware-software co-design for robotic UAV systems. 
 
-In summary, this paper makes the following contributions:
+In summary, this project makes the following contributions:
 
 * We build RoSÉ, a hardware-software co-simulation infrastructure for pre-silicon, full-stack evaluation of robotics UAV SoCs. RoSÉ captures the dynamic interactions between robotic hardware, software, and environment\footnote{We commit to an open-source release of the RoSÉ framework.
 
