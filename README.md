@@ -2,7 +2,7 @@
 A Hardware-Software Co-Simulation Infrastructure Enabling Pre-Silicon Full-Stack Robotics SoC Evaluation
 This artifact appendix describes how to use RoSEto run end-to-end robotics simulations, and how to reproduce results as shown in Section V of the paper. The instructions assume that a user already has robotic applications and hardware configurations developed, and provides reference examples used in the evaluation of this work. While RoSEcan be used to develop new hardware and software, instructions to do so are outside of the scope of the artifact evaluation.
 
-## Artifact Meta-Information Checklist
+## Tutorial Meta-Information Checklist
 
     • Runtime environment: Ubuntu 18.04.6 LTS, Vitis v2021.1
     • Hardware (FireSim Simulation):  Intel Xeon Gold 6242, Xilinx U250
