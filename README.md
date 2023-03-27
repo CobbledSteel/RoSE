@@ -14,8 +14,10 @@ Our evaluation demonstrates that RoSÉ holistically captures the closed-loop int
 
 In summary, this paper makes the following contributions:
 
-• We build RoSÉ, a hardware-software co-simulation infrastructure for pre-silicon, full-stack evaluation of robotics UAV SoCs. RoSÉ captures the dynamic interactions between robotic hardware, software, and environment\footnote{We commit to an open-source release of the RoSÉ framework}.
+• We build RoSÉ, a hardware-software co-simulation infrastructure for pre-silicon, full-stack evaluation of robotics UAV SoCs. RoSÉ captures the dynamic interactions between robotic hardware, software, and environment\footnote{We commit to an open-source release of the RoSÉ framework.
+
 • We design software algorithms, and hardware SoCs along with robotic environments, to holistically evaluate the co-design trade-off in robotic UAV systems using RoSÉ.
+
 • We demonstrate design space exploration of domain-specific SoCs enabled by RoSÉ and identify significant design trade-offs.
 
 # RoSÉ Tutorial
