@@ -16,7 +16,7 @@ The sensor environment data is passed from AirSim to FireSim to trigger the hard
 Our evaluation demonstrates that RoSÉ holistically captures the closed-loop interactions between environment, algorithms, and hardware, opening up new opportunities for systematic hardware-software co-design for robotic UAV systems. 
 
 # RoSÉ Tutorial
-This artifact appendix describes how to use RoSEto run end-to-end robotics simulations, and how to reproduce experimental results.
+This artifact appendix describes how to use RoSÉ to run end-to-end robotics simulations, and how to reproduce experimental results.
 
 The instructions assume that a user already has robotic applications and hardware configurations developed, and provides reference examples used in the evaluation of this work. While RoSEcan be used to develop new hardware and software, instructions to do so are outside of the scope of the artifact evaluation.
 
@@ -57,7 +57,7 @@ Additionally, this evaluation builds upon the following infrastructures. For the
 
 (2) Dependencies - Hardware 
 
-To run a full simulation with RoSE, access to a GPU and FPGA is required, although these can be hosted on separate computers. For this artifact evaluation, instructions for running simulations on a locally-provisioned FPGA are provided. However, RoSEcan also be used using AWS EC2 FPGA instances (e.g. f1.2xlarge). To avoid lengthy build times of over 8 hours, we provide pre-built FPGA instances for the SoC configurations evaluated in this work. However, reference build scripts for re-generating new bitstreams are provided. 
+To run a full simulation with RoSÉ, access to a GPU and FPGA is required, although these can be hosted on separate computers. For this artifact evaluation, instructions for running simulations on a locally-provisioned FPGA are provided. However, RoSEcan also be used using AWS EC2 FPGA instances (e.g. f1.2xlarge). To avoid lengthy build times of over 8 hours, we provide pre-built FPGA instances for the SoC configurations evaluated in this work. However, reference build scripts for re-generating new bitstreams are provided. 
 
 Additionally, GPU access is needed in order to run robotics environment simulations with rendering. For this evaluation, AirSim binaries packaged using Unreal Engine are provided. We also provide API access to running AirSim environments hosted on AWS. While direct access to live AirSim renderings are not needed for the evaluation, remote desktop access could be provided if requested to view simulation progress.
 
