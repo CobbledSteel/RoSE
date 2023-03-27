@@ -1,5 +1,4 @@
-# RoSÉ
-A Hardware-Software Co-Simulation Infrastructure Enabling Pre-Silicon Full-Stack Robotics SoC Evaluation
+# RoSÉ: A Hardware-Software Co-Simulation Infrastructure Enabling Pre-Silicon Full-Stack Robotics SoC Evaluation
 
 Robotic systems such as unmanned autonomous drones and self-driving cars have been widely deployed in many scenarios and have the potential to revolutionize the future generation of computing. To improve the performance and energy efficiency of robotic platforms,  significant research efforts are being devoted to developing hardware accelerators for workloads that form bottlenecks in the robotics software pipeline.
 
@@ -9,9 +8,7 @@ In addition, the closed-loop nature of robotic systems, where there is a tight i
 
 To address this limitation, we develop RoSÉ, an open-source, hardware-software co-simulation infrastructure for full-stack, pre-silicon hardware-in-the-loop evaluation of robotics SoCs, together with the full software stack and realistic robotic environments created to support robotics RoSE captures the complex interactions across hardware, algorithm, and environment, enabling new architectural research directions in hardware-software co-design for robotic UAV systems.
 
-Specifically, RoSÉ integrates AirSim, a software robotic environment simulator, supporting UAV models and FireSim, an FPGA-based RTL simulator, to capture closed-loop interactions between environments, algorithms, and hardware.
-
-The sensor environment data is passed from AirSim to FireSim to trigger the hardware pipeline, and the computed commands are generated from the FireSim hardware simulation and fed back to AirSim. RoSÉ accurately synchronizes the timing and data transfer between the AirSim environment simulator and the FireSim hardware simulator without significant degradation in simulation speed. 
+Specifically, RoSÉ integrates AirSim, a software robotic environment simulator, supporting UAV models and FireSim, an FPGA-based RTL simulator, to capture closed-loop interactions between environments, algorithms, and hardware. The sensor environment data is passed from AirSim to FireSim to trigger the hardware pipeline, and the computed commands are generated from the FireSim hardware simulation and fed back to AirSim. RoSÉ accurately synchronizes the timing and data transfer between the AirSim environment simulator and the FireSim hardware simulator without significant degradation in simulation speed. 
 
 Our evaluation demonstrates that RoSÉ holistically captures the closed-loop interactions between environment, algorithms, and hardware, opening up new opportunities for systematic hardware-software co-design for robotic UAV systems. 
 
