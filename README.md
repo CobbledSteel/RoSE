@@ -20,6 +20,10 @@ In summary, this paper makes the following contributions:
 
 * We demonstrate design space exploration of domain-specific SoCs enabled by RoSÉ and identify significant design trade-offs.
 
+In response to the growing complexity of robotics workloads, hardware, and applications, we propose RoSÉ, enabling robotics UAV researchers and architects to comprehensively evaluate robotics UAV SoCs. RoSÉ captures a full-stack simulation of a robot by integrating the simulation of a robot UAV's environment and its RTL, enabling design space exploration of robot environments, algorithms, hardware, and system parameters within a unified simulation environment. 
+
+By using RoSÉ, researchers can better study and analyze the tradeoffs of robotic UAV systems without the overhead of taping out an SoC. Building upon RoSÉ by introducing new applications, robot UAV environments, and architectures will enable the agile development of robotics SoCs across diverse domains. 
+
 # RoSÉ Tutorial
 This artifact appendix describes how to use RoSÉ to run end-to-end robotics simulations, and how to reproduce experimental results.
 
@@ -47,12 +51,10 @@ The instructions assume that a user already has robotic applications and hardwar
 
  • The artifacts consist of modifications/patches to the following sources:
 
-* RoSE Core: Deployment, synchronization, and evaluation software, as well as hardware configurations, and patches to FireSim and Chipyard. (https://github.com/CobbledSteel/RoSE)
+* RoSÉ Core: Deployment, synchronization, and evaluation software, as well as hardware configurations, and patches to FireSim and Chipyard. (https://github.com/CobbledSteel/RoSE)
 * FireSim: Top-level FPGA-Accelerated RTL Simulation Environment (https://github.com/firesim/firesim) 
 * Chipyard: RISC-V SoC generation environment (https://github.com/ucb-bar/chipyard) 
 * RISCV ONNX Runtime: Software for executing HW-accelerated DNN models, modified for use in  UAV control (https://github.com/ucb-bar/onnxruntime-riscv/tree/onnx-rose).
-
-
 
 Additionally, this evaluation builds upon the following infrastructures. For the purpose of the evaluation, binaries for simulators built from Unreal Engine and AirSim are provided. 
 
